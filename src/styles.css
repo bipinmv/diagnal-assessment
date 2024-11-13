@@ -39,9 +39,10 @@ main {
   display: flex;
   align-items: center;
   transition: 0.5s all;
-  height: 33.6px; /* same height as input*/
+  height: 33.6px;
+  /* same height as input*/
 
-  > img:first-child {
+  >img:first-child {
     margin-right: 1.5rem;
   }
 
@@ -62,7 +63,7 @@ main {
     width: calc(100% - 1.5rem);
     padding: 0.5rem;
     border: 1px solid grey;
-    background-color: #333;
+    background-color: #171717;
     color: white;
     border-radius: 4px;
 
@@ -75,7 +76,7 @@ main {
     display: flex;
     align-items: center;
 
-    > img {
+    >img {
       margin-right: 1rem;
     }
   }
