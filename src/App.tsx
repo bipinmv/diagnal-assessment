@@ -96,11 +96,7 @@ const App: React.FC = () => {
 				{!searchQuery && !stopFetching && (
 					<div ref={observerTarget} style={{ height: "4px" }} />
 				)}
-				{loading && (
-					<div className="mt-4 text-center text-white">
-						Loading more content...
-					</div>
-				)}
+				{loading && <div className="loading">Loading...</div>}
 			</div>
 		</main>
 	);
