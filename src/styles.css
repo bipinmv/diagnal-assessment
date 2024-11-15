@@ -109,3 +109,10 @@ main {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.no-data {
+  width: 414px;
+  text-align: center;
+  color: grey;
+  font-size: 0.725rem;
+}
