@@ -59,6 +59,10 @@ const App: React.FC = () => {
 		return () => observer.disconnect();
 	}, [loadMoreContent, loading]);
 
+	/**
+	 * API call for image will get triggered even when we do client side search
+	 * one approach is to use a hashmap and store image name and content
+	 */
 	const filteredItems = items.filter(item =>
 		item.name.toLowerCase().includes(searchQuery.toLowerCase())
 	);
