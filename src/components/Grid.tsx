@@ -8,18 +8,18 @@ interface Item {
 
 interface Props {
 	items: Item[];
+	hasCompletedFetching: boolean;
 }
 
-const Grid: React.FC<Props> = ({ items }) => {
+const Grid: React.FC<Props> = ({ items, hasCompletedFetching }) => {
 	return (
 		<>
-			{items.length > 0 ? (
-				<div className="grid">
-					{items.map((item, index) => (
-						<ContentTile key={item.name + index} item={item} />
-					))}
-				</div>
-			) : (
+			<div className="grid">
+				{items.map((item, index) => (
+					<ContentTile key={item.name + index} item={item} />
+				))}
+			</div>
+			{items.length === 0 && hasCompletedFetching && (
 				<div className="no-data">No data to display</div>
 			)}
 		</>

@@ -92,11 +92,8 @@ const App: React.FC = () => {
 				)}
 			</div>
 			<div className="container">
-				{loading ? (
-					<div className="loading">Loading...</div>
-				) : (
-					<Grid items={filteredItems} />
-				)}
+				<Grid items={filteredItems} hasCompletedFetching={!loading} />
+				{loading && <div className="loading">Loading...</div>}
 				{!searchQuery && !stopFetching && (
 					<div ref={observerTarget} style={{ height: "4px" }} />
 				)}
